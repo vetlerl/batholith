@@ -14,9 +14,33 @@
       <vfs_project>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_project>
       <vfs_file>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\src\user_interface.ads</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_project>
       <vfs_file>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 29" >
+      <vfs_project>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_project>
+      <vfs_file>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 5" >
+      <vfs_project>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_project>
+      <vfs_file>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 3" >
+      <vfs_project>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_project>
+      <vfs_file>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\src\client.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 3" >
+      <vfs_project>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_project>
+      <vfs_file>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 4" line=" 3" >
+      <vfs_project>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr</vfs_project>
+      <vfs_file>C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\src\user_interfaces.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>
