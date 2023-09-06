@@ -15,8 +15,9 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U user_interfaces%b	user_interfaces.adb	3f478c1a NE OO PK
+U user_interfaces%b	user_interfaces.adb	104f0477 NE OO PK
 W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W glib%s		glib.adb		glib.ali
@@ -127,8 +128,8 @@ D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
-D user_interfaces.ads	20230905202422 7e4cbe34 user_interfaces%s
-D user_interfaces.adb	20230905202956 bc921d5a user_interfaces%b
+D user_interfaces.ads	20230905204158 7e4cbe34 user_interfaces%s
+D user_interfaces.adb	20230906132844 07f5a523 user_interfaces%b
 G a e
 G c Z s b [add_css user_interfaces 6 14 none]
 G r c none [add_css user_interfaces 6 14 none] [gtk_new gtk__css_provider 824 14 none]
@@ -139,10 +140,12 @@ G r c none [add_css user_interfaces 6 14 none] [add_provider gtk__style_context 
 G r c none [add_css user_interfaces 6 14 none] [get_message glib__error 60 13 none]
 G r c none [add_css user_interfaces 6 14 none] [error_free glib__error 44 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 96|13r6 13r29
+16K9*Ada 20e8 96|13r6 13r29 16r6 16r29
+X 2 a-except.ads
+44K13*Exceptions 289e19 96|16w10 16r33
 X 10 a-textio.ads
 58K13*Text_IO 725e16 96|13w10 13r33
-506U14*Put_Line 96|44s10 46s10 48s7 57s10
+506U14*Put_Line 96|47s10 49s10 51s7 60s10
 X 15 gdk.ads
 46P9*Gdk_Visual<29|153P9>
 X 17 gdk-device.ads
@@ -154,13 +157,13 @@ X 28 gdk-visual.ads
 79V13*Convert[94|20]{15|46P9} 32|59i21
 X 29 glib.ads
 38K9*Glib 429e9 96|9w6 9r29 10r6 10r29
-55M9*Guint<56|44M9> 96|55r50
+55M9*Guint<56|44M9> 96|58r50
 153P9*C_Proxy(150R9)
 X 30 glib-error.ads
 33K14*Error 68e15 96|10w11 10r34
-36P9*GError<29|153P9> 96|33r23
-44U14*Error_Free 96|58s10
-60V13*Get_Message{string} 96|57s31
+36P9*GError<29|153P9> 96|36r23
+44U14*Error_Free 96|61s10
+60V13*Get_Message{string} 96|60s31
 X 34 glib-object.ads
 41P9*GObject(40R9)
 675V13*Convert{72|67M9} 32|58i21 33|49i21
@@ -171,23 +174,23 @@ X 40 gtk.ads
 41K9*Gtk 79e8 95|2r6 2r22 96|2r6 2r29 5r6 5r29 6r6 6r29
 X 43 gtk-css_provider.ads
 815K13*Css_Provider 936e21 96|5w10 5r33
-818P9*Gtk_Css_Provider(817R9) 96|31r15
-824U14*Gtk_New 96|37s7
-849V13*Load_From_Path{boolean} 96|40R16
-927V14*"+"=930:42{49|40M9} 96|55s44
+818P9*Gtk_Css_Provider(817R9) 96|34r15
+824U14*Gtk_New 96|40s7
+849V13*Load_From_Path{boolean} 96|43R16
+927V14*"+"=930:42{49|40M9} 96|58s44
 X 45 gtk-enums.ads
 865V13*Convert{72|67M9} 32|58i21 33|49i21
 866V13*Convert{string} 32|59i21 33|50i21
 X 48 gtk-style_context.ads
 113K13*Style_Context 1058e22 96|6w10 6r33
 116P9*Gtk_Style_Context(115R9)
-165U14*Add_Provider 96|55R31
-652V13*Get_Style_Context{116P9} 96|55s10
+165U14*Add_Provider 96|58R31
+652V13*Get_Style_Context{116P9} 96|58s10
 X 49 gtk-style_provider.ads
 40M9*Gtk_Style_Provider<36|90M9>
 X 52 gtk-widget.ads
 341K13*Widget 5431e15 95|2w10 2r26 96|2w10 2r33
-343R9*Gtk_Widget_Record<34|40R9> 343e65 95|6r32 96|30r32
+343R9*Gtk_Widget_Record<34|40R9> 343e65 95|6r32 96|33r32
 344P9*Gtk_Widget(343R9)
 431V13*Convert{72|67M9} 32|58i21 33|49i21
 432V13*Convert{344P9} 32|59i21 33|50i21
@@ -196,12 +199,12 @@ X 56 i-c.ads
 X 72 system.ads
 67M9*Address
 X 95 user_interfaces.ads
-4K9*User_Interfaces 11l5 11e20 96|16b14 64l5 64t20
-6U14*Add_Css 6^22 6>57 96|30b14 61l8 61t15
-6p22 W(52|343R9) 96|30b22 55r28
-6a57 Address{string} 96|30b57 40r36 48r16
+4K9*User_Interfaces 11l5 11e20 96|19b14 67l5 67t20
+6U14*Add_Css 6^22 6>57 96|33b14 64l8 64t15
+6p22 W(52|343R9) 96|33b22 58r28
+6a57 Address{string} 96|33b57 43r36 51r16
 X 96 user_interfaces.adb
-31p7 Css{43|818P9} 37m15 37r15 40r31 55r45
-32b7 Dummy{boolean} 40m7 43r10
-33p7 Error{30|36P9} 40m45 40r45 54r10 57r43 58r21
+34p7 Css{43|818P9} 40m15 40r15 43r31 58r45
+35b7 Dummy{boolean} 43m7 46r10
+36p7 Error{30|36P9} 43m45 43r45 57r10 60r43 61r21
 

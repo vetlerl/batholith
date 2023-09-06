@@ -6,6 +6,7 @@ C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\default.gpr
 C:\GtkAda\lib\gnat\gtkada.gpr
 20230716110442 35513ac586a1d2330e307842a9d11776
 [BOUND OBJECT FILES]
+C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\obj\user_interfaces.o
 C:\Users\vetle\OneDrive\Dokumenter\GitHub\vetles-gtkada-uis\obj\client.o
 [GENERATED SOURCE FILES]
 b__client.ads
@@ -18,5 +19,8 @@ b__client.ali
 -LC:/gnat/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
 -static
 -static-libgcc
+-shared-libgcc
+-shared-libgcc
+-shared-libgcc
 C:/gnat/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
 -Wl,--stack=0x2000000
