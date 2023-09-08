@@ -10,7 +10,7 @@ Please see the CONTRIBUTE.md file for information about contributing.
 
 # feedback
 
-If you feel like your sitting on useful feedback on the project, feel free to contact me on vetle.github@gmail.com, or create an issue/discussion on the issues tab https://github.com/vetlerl/vetles-gtkada-uis/issues .
+If you feel like you're sitting on useful feedback on the project, feel free to contact me on vetle.github@gmail.com, or create an issue/discussion on the issues tab https://github.com/vetlerl/vetles-gtkada-uis/issues .
 
 # licence
 
