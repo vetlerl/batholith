@@ -1,0 +1,6 @@
+GtkButton {
+    color : grey;
+}
+GtkButton.clicked {
+    color : lightblue;
+}
