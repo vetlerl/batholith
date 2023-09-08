@@ -1,6 +1,12 @@
 GtkButton {
-    color : grey;
+    color: white;
+    background: darkblue;
 }
-GtkButton.clicked {
-    color : lightblue;
+GtkButton:hover {
+    color: lightgrey;
+    background: blue;
+}
+GtkButton:active {
+    color: grey;
+    background: lightblue;
 }
