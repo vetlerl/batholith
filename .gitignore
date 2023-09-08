@@ -7,11 +7,11 @@
 !/src/
 !/css/
 
-# Ignore sub-directories and files
+# Ignore subdirectories and files within /src and /css
 /src/*
 /css/*
 
-# Re-allow specific files and filetypes
+# Re-allow specific files and filetypes within /src and /css
 !src/user_interfaces.adb
 !src/user_interfaces.ads
 !css/*.css
