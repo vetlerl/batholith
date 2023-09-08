@@ -3,6 +3,7 @@
 
 # Allow specific files and directories
 !README.md
+!CONTRIBUTE.md
 !default.gpr
 !/src/
 !/css/
