@@ -5,5 +5,9 @@
 !README.md
 !default.gpr
 /src/*
+/css/*
+
 !src/user_interfaces.adb
 !src/user_interfaces.ads
+
+!css/*.css
