@@ -4,10 +4,14 @@
 # Allow specific files and directories
 !README.md
 !default.gpr
+!/src/
+!/css/
+
+# Ignore sub-directories and files
 /src/*
 /css/*
 
+# Re-allow specific files and filetypes
 !src/user_interfaces.adb
 !src/user_interfaces.ads
-
 !css/*.css
