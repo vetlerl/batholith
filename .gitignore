@@ -1,0 +1,9 @@
+# Ignore all files and directories
+/*
+
+# Allow specific files and directories
+!README.md
+!default.gpr
+/src/*
+!src/user_interfaces.adb
+!src/user_interfaces.ads
