@@ -12,6 +12,9 @@ with Glib.Error;        use Glib.Error;
 --ADA I/O
 with Ada.Text_IO;       use Ada.Text_IO;
 
+--ADA Exceptions handling
+with Ada.Exceptions;    use Ada.Exceptions;
+
 
 package body User_Interfaces is
 
