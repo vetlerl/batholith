@@ -81,10 +81,22 @@ package body User_Interfaces is
       Styled_Button: Gtk_Button;
    begin
       --creation
-      Gtk_New(Styled_Button);
+      Styled_Button := Gtk_Button_New_With_Label(Label);
       --exceptions
       begin
-         null;
+         case Theme is
+            when Default_Theme => 
+               Add_Css(Styled_Button, "..\css\button-style.css");
+            when Dark_Theme =>
+               Add_Css(Styled_Button, "..\css\button-style.css");
+            when Light_Theme =>
+               Add_Css(Styled_Button, "..\css\button-style.css");
+            when Minimalist_Theme =>
+               Add_Css(Styled_Button, "..\css\button-style.css");
+            when others =>
+               null; --raise exception
+         end case;
+         Styled_Button.Set_Vexpand(True); Styled_Button.Set_Hexpand(True);
       exception
          when E: others => 
             Put_Line("Raised exception: "& Exception_Name(E));

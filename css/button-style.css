@@ -1,6 +1,15 @@
 GtkButton {
     color: white;
     background: darkblue;
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bold;
+    border: 5px solid black;
+    border-radius: 20px;
+
+}
+GtkLabel {
+    border-radius: 20px;
 }
 GtkButton:hover {
     color: lightgrey;
