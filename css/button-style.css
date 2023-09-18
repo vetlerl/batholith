@@ -1,20 +1,23 @@
 GtkButton {
     color: white;
     background: darkblue;
+    outline: none;
     font-family: Arial;
     font-size: 60px;
     font-weight: bold;
     border: 5px solid black;
     border-radius: 20px;
+}
 
-}
 GtkLabel {
-    border-radius: 20px;
+    border-radius: 20px; /* to avoid straight edges */
 }
+
 GtkButton:hover {
     color: lightgrey;
     background: blue;
 }
+
 GtkButton:active {
     color: grey;
     background: lightblue;
