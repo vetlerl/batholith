@@ -76,27 +76,30 @@ package body User_Interfaces is
    -- ASCII Text Art Generator - Text Kool - Slant
    -----------------------------------------------------------------------------
    function Create_Stylized_Button(Label: in String := "";
-                                   Theme: in Button_Theme := Default_Theme)
+                                   Theme: in Button_Theme := Default_Theme;
+                                   Size:  in Button_Size  := Default_Size)
                                    return Gtk_Button is
-      Styled_Button: Gtk_Button;
+      Stylized_Button: Gtk_Button;
    begin
       --creation
-      Styled_Button := Gtk_Button_New_With_Label(Label);
+      Stylized_Button := Gtk_Button_New_With_Label(Label);
       --exceptions
       begin
          case Theme is
             when Default_Theme => 
-               Add_Css(Styled_Button, "..\css\button-style.css");
+               Add_Css(Stylized_Button, "..\css\button-style.css");
             when Dark_Theme =>
-               Add_Css(Styled_Button, "..\css\button-style.css");
+               Add_Css(Stylized_Button, "..\css\button-style.css");
             when Light_Theme =>
-               Add_Css(Styled_Button, "..\css\button-style.css");
+               Add_Css(Stylized_Button, "..\css\button-style.css");
             when Minimalist_Theme =>
-               Add_Css(Styled_Button, "..\css\button-style.css");
+               Add_Css(Stylized_Button, "..\css\button-style.css");
             when others =>
                null; --raise exception
          end case;
-         Styled_Button.Set_Vexpand(True); Styled_Button.Set_Hexpand(True);
+         
+         
+         Stylized_Button.Set_Vexpand(True); Stylized_Button.Set_Hexpand(True);
       exception
          when E: others => 
             Put_Line("Raised exception: "& Exception_Name(E));
@@ -104,7 +107,7 @@ package body User_Interfaces is
             Put_Line(Exception_Message(E));
             New_Line;
       end;
-      return Styled_Button; 
+      return Stylized_Button; 
    end Create_Stylized_Button;
    -----------------------------------------------------------------------------
    
