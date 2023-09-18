@@ -1,5 +1,6 @@
 --GTKADA, Basic
 with Gtk.Widget;        use Gtk.Widget;
+with Gtk.Button;        use Gtk.Button;
 
 --GTKADA, Style
 with Gtk.Css_Provider;  use Gtk.Css_Provider;
@@ -31,9 +32,9 @@ package body User_Interfaces is
    -- ASCII Text Art Generator - Text Kool - Big
    -----------------------------------------------------------------------------
    procedure Add_Css(W: access Gtk_Widget_Record'Class; Address: in String) is
-      Css :   Gtk_Css_Provider;
-      Dummy : Boolean;
-      Error : aliased GError := null;
+      Css:   Gtk_Css_Provider;
+      Dummy: Boolean;
+      Error: aliased GError := null;
       
    begin
       --creation of Css-provider
@@ -63,5 +64,37 @@ package body User_Interfaces is
       
    end Add_Css;
    -----------------------------------------------------------------------------
+   
+   -----------------------------------------------------------------------------
+   --     _____ __        ___                ______        __  __             --
+   --    / ___// /___  __/ (_)___  ___  ____/ / __ )__  __/ /_/ /_____  ____  --
+   --    \__ \/ __/ / / / / /_  / / _ \/ __  / __  / / / / __/ __/ __ \/ __ \ --
+   --   ___/ / /_/ /_/ / / / / /_/  __/ /_/ / /_/ / /_/ / /_/ /_/ /_/ / / / / --
+   --  /____/\__/\__, /_/_/ /___/\___/\__,_/_____/\__,_/\__/\__/\____/_/ /_/  --
+   --           /____/                                                        --
+   -----------------------------------------------------------------------------
+   -- ASCII Text Art Generator - Text Kool - Slant
+   -----------------------------------------------------------------------------
+   function Create_Stylized_Button(Label: in String := "";
+                                   Theme: in Button_Theme := Default_Theme)
+                                   return Gtk_Button is
+      Styled_Button: Gtk_Button;
+   begin
+      --creation
+      Gtk_New(Styled_Button);
+      --exceptions
+      begin
+         null;
+      exception
+         when E: others => 
+            Put_Line("Raised exception: "& Exception_Name(E));
+            Put_Line(Exception_Information(E));
+            Put_Line(Exception_Message(E));
+            New_Line;
+      end;
+      return Styled_Button; 
+   end Create_Stylized_Button;
+   -----------------------------------------------------------------------------
+   
 
 end User_Interfaces;

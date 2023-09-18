@@ -1,5 +1,6 @@
 --GTKADA, Basic
 with Gtk.Widget; use Gtk.Widget;
+with Gtk.Button; use Gtk.Button;
 
 package User_Interfaces is
 
@@ -7,5 +8,9 @@ package User_Interfaces is
    --a simple procedure that adds an external css script to a GtkWidget
    --puts the success/failure of the import to the terminal
    
-
+   type Button_Theme is (Default_Theme, Dark_Theme, Light_Theme, Minimalist_Theme);
+   
+   function Create_Stylized_Button(Label: in String := ""; 
+                                   Theme: in Button_Theme := Default_Theme)
+                                   return Gtk_Button;
 end User_Interfaces;
