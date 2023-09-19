@@ -8,33 +8,30 @@ GtkButton {
     font-family: Arial;
     font-size: 20px;
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
 
     /* Size */
     border: 2px solid darkblue;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px 30px;
 
-    /* Others */
-    animation: font-weight 3.0s;
+    /*Others */
+    
     
 
 }
 
-GtkLabel {
-    border-radius: 20px; /* to avoid straight edges */
-    
-}
 
 GtkButton:hover {
     color: lightgrey;
     background: linear-gradient(45deg, darkblue, blue);
+    font-style: italic;
 
     
 }
 
 GtkButton:active {
-    color: grey;
-    background: linear-gradient(to left, lightblue, cyan);
+    color: lightgray;
+    background: linear-gradient(to left, rgb(0, 110, 255), blue);
 
 }
