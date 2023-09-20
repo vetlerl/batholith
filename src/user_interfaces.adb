@@ -76,7 +76,7 @@ package body User_Interfaces is
    -- ASCII Text Art Generator - Text Kool - Slant
    -----------------------------------------------------------------------------
    function Create_Stylized_Button(Label: in String := "";
-                                   Theme: in Button_Theme := Default_Theme;
+                                   Theme: in Button_Theme := Default;
                                    Size:  in Button_Size  := Default_Size)
                                    return Gtk_Button is
       Stylized_Button: Gtk_Button;
@@ -86,16 +86,16 @@ package body User_Interfaces is
       --exceptions
       begin
          case Theme is
-            when Default_Theme => 
+            when Default     =>
                Add_Css(Stylized_Button, "..\css\button-style.css");
-            when Dark_Theme =>
-               Add_Css(Stylized_Button, "..\css\button-style.css");
+            when Dark_Theme  =>
+               Add_Css(Stylized_Button, "..\css\button-style-dark.css");
             when Light_Theme =>
-               Add_Css(Stylized_Button, "..\css\button-style.css");
-            when Minimalist_Theme =>
+               Add_Css(Stylized_Button, "..\css\button-style-light.css");
+            when Minimalist  =>
                Add_Css(Stylized_Button, "..\css\button-style.css");
             when others =>
-               null; --raise exception
+               Add_Css(Stylized_Button, "..\css\button-style.css");
          end case;
          
          

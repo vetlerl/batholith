@@ -1,31 +1,31 @@
 GtkButton {
     /* Coloration */
-    color: white;
-    background: linear-gradient(45deg, blue, darkblue);
+    color: rgb(58, 55, 55);
+    background: linear-gradient(45deg, rgb(224, 215, 215), lightgrey);
     outline: none;
 
     /* Font styling */
     font-family: Arial;
     font-size: 20px;
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 
     /* Size */
-    border: 2px solid darkblue;
+    border: 2px solid rgb(58, 55, 55);
     border-radius: 10px;
     padding: 20px 30px;
 
     /*Others */
-    
+
 }
 
 GtkButton:hover {
-    background: linear-gradient(45deg, darkblue, blue);
+    background: linear-gradient(45deg, lightgrey, rgb(224, 215, 215));
     font-style: italic;
 
 }
 
 GtkButton:active {
-    background: linear-gradient(to left, rgb(0, 110, 255), blue);
+    background: linear-gradient(to left, white, lightgrey);
 
 }
