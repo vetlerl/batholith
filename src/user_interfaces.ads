@@ -8,11 +8,9 @@ package User_Interfaces is
    --a simple procedure that adds an external css script to a GtkWidget
    --puts the success/failure of the import to the terminal
    
-   type Button_Theme is (Default, Dark_Theme, Light_Theme, Minimalist);
-   type Button_Size  is (Default_Size, Tiny, Small, Big, Massive);
+   type Button_Theme is (B_Default_Theme, B_Dark_Theme, B_Light_Theme);
    
    function Create_Stylized_Button(Label: in String := ""; 
-                                   Theme: in Button_Theme := Default;
-                                   Size:  in Button_Size  := Default_Size)
+                                   Theme: in Button_Theme := B_Default_Theme)
                                    return Gtk_Button;
 end User_Interfaces;

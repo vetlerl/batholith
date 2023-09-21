@@ -1,6 +1,7 @@
 --GTKADA, Basic
 with Gtk.Widget;        use Gtk.Widget;
 with Gtk.Button;        use Gtk.Button;
+with Gtk.Label;         use Gtk.Label;
 
 --GTKADA, Style
 with Gtk.Css_Provider;  use Gtk.Css_Provider;
@@ -76,30 +77,52 @@ package body User_Interfaces is
    -- ASCII Text Art Generator - Text Kool - Slant
    -----------------------------------------------------------------------------
    function Create_Stylized_Button(Label: in String := "";
-                                   Theme: in Button_Theme := Default;
-                                   Size:  in Button_Size  := Default_Size)
+                                   Theme: in Button_Theme := B_Default_Theme)
                                    return Gtk_Button is
       Stylized_Button: Gtk_Button;
+      Contained_Label: Gtk_Label;
    begin
       --creation
-      Stylized_Button := Gtk_Button_New_With_Label(Label);
-      --exceptions
+      Gtk_New(Stylized_Button); 
+      Contained_Label := Gtk_Label_New(Label);
+      
+      --setting
+      Stylized_Button.Set_Vexpand(True); Stylized_Button.Set_Hexpand(True);      
+      Contained_Label.Set_Vexpand(True); Contained_Label.Set_Hexpand(True);
+      
+      --adding
+      Stylized_Button.Add(Contained_Label);
+      
+      
+      --signal connecting 
+      begin
+         --On Button-Hover -> Underline GtkLabel
+         null;
+         --On Button size change -> Increase GtkLabel font size
+         null;
+      exception
+         when E: others =>
+            Put_Line("Raised exception: "& Exception_Name(E));
+            Put_Line(Exception_Information(E));
+            Put_Line(Exception_Message(E));
+            New_Line;
+            
+      end;
+      
+      
+      --Add_Css
       begin
          case Theme is
-            when Default     =>
+            when B_Default_Theme =>
                Add_Css(Stylized_Button, "..\css\button-style.css");
-            when Dark_Theme  =>
+            when B_Dark_Theme    =>
                Add_Css(Stylized_Button, "..\css\button-style-dark.css");
-            when Light_Theme =>
+            when B_Light_Theme   =>
                Add_Css(Stylized_Button, "..\css\button-style-light.css");
-            when Minimalist  =>
-               Add_Css(Stylized_Button, "..\css\button-style.css");
             when others =>
                Add_Css(Stylized_Button, "..\css\button-style.css");
          end case;
          
-         
-         Stylized_Button.Set_Vexpand(True); Stylized_Button.Set_Hexpand(True);
       exception
          when E: others => 
             Put_Line("Raised exception: "& Exception_Name(E));
@@ -107,6 +130,7 @@ package body User_Interfaces is
             Put_Line(Exception_Message(E));
             New_Line;
       end;
+      --return GtkButton
       return Stylized_Button; 
    end Create_Stylized_Button;
    -----------------------------------------------------------------------------
