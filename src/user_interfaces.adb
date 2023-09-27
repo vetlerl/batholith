@@ -10,6 +10,7 @@ with Gtk.Style_Context; use Gtk.Style_Context;
 --GTKADA, Glib
 with Glib;              use Glib;
 with Glib.Error;        use Glib.Error;
+with Glib.Object;       use Glib.Object;
 
 --ADA I/O
 with Ada.Text_IO;       use Ada.Text_IO;
@@ -81,6 +82,7 @@ package body User_Interfaces is
                                    return Gtk_Button is
       Stylized_Button: Gtk_Button;
       Contained_Label: Gtk_Label;
+      
    begin
       --creation
       Gtk_New(Stylized_Button); 
@@ -92,23 +94,6 @@ package body User_Interfaces is
       
       --adding
       Stylized_Button.Add(Contained_Label);
-      
-      
-      --signal connecting 
-      begin
-         --On Button-Hover -> Underline GtkLabel
-         null;
-         --On Button size change -> Increase GtkLabel font size
-         null;
-      exception
-         when E: others =>
-            Put_Line("Raised exception: "& Exception_Name(E));
-            Put_Line(Exception_Information(E));
-            Put_Line(Exception_Message(E));
-            New_Line;
-            
-      end;
-      
       
       --Add_Css
       begin
@@ -130,6 +115,7 @@ package body User_Interfaces is
             Put_Line(Exception_Message(E));
             New_Line;
       end;
+      
       --return GtkButton
       return Stylized_Button; 
    end Create_Stylized_Button;
