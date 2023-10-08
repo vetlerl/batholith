@@ -78,7 +78,7 @@ package body User_Interfaces is
    -- ASCII Text Art Generator - Text Kool - Slant
    -----------------------------------------------------------------------------
    function Create_Stylized_Button(Label: in String := "";
-                                   Theme: in Button_Theme := B_Default_Theme)
+                                   Theme: in Vetle_Theme := Default_Theme)
                                    return Gtk_Button is
       Stylized_Button: Gtk_Button;
       Contained_Label: Gtk_Label;
@@ -98,11 +98,11 @@ package body User_Interfaces is
       --Add_Css
       begin
          case Theme is
-            when B_Default_Theme =>
+            when Default_Theme =>
                Add_Css(Stylized_Button, "..\css\button-style.css");
-            when B_Dark_Theme    =>
+            when Dark_Theme    =>
                Add_Css(Stylized_Button, "..\css\button-style-dark.css");
-            when B_Light_Theme   =>
+            when Light_Theme   =>
                Add_Css(Stylized_Button, "..\css\button-style-light.css");
             when others =>
                Add_Css(Stylized_Button, "..\css\button-style.css");
@@ -119,7 +119,33 @@ package body User_Interfaces is
       --return GtkButton
       return Stylized_Button; 
    end Create_Stylized_Button;
-   -----------------------------------------------------------------------------
+   -----------------------------------------------------------------------------------------------
    
+   ------------------------------------------------------------------------------------------------
+   --  __ _         _ _             _   ___ _               _      ___       _   _               --
+   -- / _\ |_ _   _| (_)_______  __| | / __\ |__   ___  ___| | __ / __\_   _| |_| |_ ___  _ __   --
+   -- \ \| __| | | | | |_  / _ \/ _` |/ /  | '_ \ / _ \/ __| |/ //__\// | | | __| __/ _ \| '_ \  --
+   -- _\ \ |_| |_| | | |/ /  __/ (_| / /___| | | |  __/ (__|   </ \/  \ |_| | |_| || (_) | | | | --
+   -- \__/\__|\__, |_|_/___\___|\__,_\____/|_| |_|\___|\___|_|\_\_____/\__,_|\__|\__\___/|_| |_| --
+   --         |___/                                                                              --
+   ------------------------------------------------------------------------------------------------
+   -- ASCII Text Art Generator - Text Kool - Slant
+   ------------------------------------------------------------------------------------------------
+   function Create_Stylized_Check_Button(Label: in String := "";
+                                        Theme: in Vetle_Theme := Default_Theme)
+                                        return Gtk_Check_Button is
+      Stylized_Check_Button : Gtk_Check_Button ;
+   begin
+      --creation
+      Gtk_New(Stylized_Check_Button);
+      null;
+      return Stylized_Check_Button;
+   end Create_Stylized_Check_Button;
+   
+   
+   
+   
+   
+   ------------------------------------------------------------------------------------------------
 
 end User_Interfaces;
