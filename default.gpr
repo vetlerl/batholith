@@ -12,13 +12,13 @@ project Default is
    case Library_Type is
 
       when "static" =>
-         for Main use ("client.adb");
+         for Main use ("test_ui.adb", "test_comp.adb");
 
       when "static-pic" =>
-         for Main use ("client");
+         for Main use ("test_ui.adb", "test_comp.adb");
 
       when "relocatable" =>
-         for Main use ("client");
+         for Main use ("test_ui.adb", "test_comp.adb");
    end case;
 
    package Linker is
@@ -26,3 +26,4 @@ project Default is
    end Linker;
 
 end Default;
+
