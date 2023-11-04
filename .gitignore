@@ -7,6 +7,7 @@
 !default.gpr
 !/src/
 !/css/
+!/bld/
 
 # Ignore subdirectories and files within /src and /css
 /src/*
