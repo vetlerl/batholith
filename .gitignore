@@ -17,5 +17,6 @@
 # Re-allow specific files and filetypes within /src and /css
 !src/user_interfaces.adb
 !src/user_interfaces.ads
+!src/batholith_dot_chart.ads
 !css/*.css
 !bld/*.glade
