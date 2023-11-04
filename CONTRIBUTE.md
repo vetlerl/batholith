@@ -1,10 +1,10 @@
-# Contributing to vetles-gtkada-uis
+# Contributing to the batholith project
 
-Welcome to vetles-gtkada-uis ! I appreciate your interest in contributing to this project !
+Welcome to batholith! I appreciate your interest in contributing to this project!
 
 # Getting started
 
-To contribute to this project, follow these steps :
+To contribute, follow these step:
 
 1. Fork the repository.
 2. Clone your forked repository.
@@ -14,4 +14,4 @@ To contribute to this project, follow these steps :
 # Contact
 
 Please feel free to contact me on my email : vetle.github@gmail.com
-Please note that feedback is also greatly appreciated if you do not feel like contributing.
+Please note that feedback in and of itself is also greatly appreciated!
