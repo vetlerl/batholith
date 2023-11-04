@@ -1,9 +1,9 @@
 # the batholith project
 
-A project in which I am experimenting with GtkAda to make a personal finance application.
+A project in which I am experimenting with GtkADA to make a personal finance application.
 This project mostly stems from my interest in the ADA programming language and my love for statistics.
 Additionnaly I'm using CSS and GLADE.
-Please check out and support the GtkAda project on GitHub on https://github.com/AdaCore/gtkada 
+Please check out and support the GtkADA project on GitHub on https://github.com/AdaCore/gtkada 
 
 # contributing
 
